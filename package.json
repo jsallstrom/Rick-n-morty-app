@@ -6,8 +6,9 @@
      "scripts": {
           "bundle": "webpack",
           "test": "echo \"Error: no test specified\" && exit 1",
-          "start": "webpack-dev-server --config webpack.dev.js --open --hot",
-          "build": "webpack --config webpack.prod.js"
+          "start": "node server/server.js",
+          "build": "webpack --config webpack.prod.js",
+          "dev": "webpack-dev-server --config webpack.dev.js --open --hot"
      },
      "author": "",
      "license": "ISC",
