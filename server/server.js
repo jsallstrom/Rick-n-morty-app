@@ -1,6 +1,8 @@
 const path = require("path");
 // in package.json we had to change the "start"-script to run "node server/server.js"
 // because Heroku needs it
+//  also something Heroku needs is this:
+// "heroku-postbuild": "npm run build", so Heroku will create the app when it is in teh git
 
 const express = require("express");
 const app = express();
