@@ -9,6 +9,9 @@ const webpack = require("webpack");
 
 require("dotenv").config({ path: ".env.prod" }); // or path: path.resolve(__dirname, "../.env.prod")
 
+// IF USING HEROKU, you need to set up heroku config files for the dotenv variables
+// watch the "Heroku enviroment variables" to set and unset variables in heroku
+
 module.exports = merge(common, {
      // and merge it so this file can inherit the config
      mode: "production",
