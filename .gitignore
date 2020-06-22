@@ -1,2 +1,5 @@
 node_modules
 dist
+playground
+.env.dev
+.env.prod

@@ -18,14 +18,29 @@ import { SearchBar } from "../elements/SearchBar";
  *
  * 2) Get Rid of scss
  *    Add the global and themeprovider
- *
+ * XXX) Make a formik thing on the about-page that you can send in
+ *      That way I can use what I learn with firebase CRUD operations
  *
  *   3) watch "Build a NAVIGATION MENU using REACT and STYLED COMPONENTS" on youtube (awesome
  *     firstr 16 min is mostly relevent, actually watch the one under first its awesome
  *   4) Watch that video where the swedish guy makes video-stuff he also talks about browserRouter cool things
  * Gotta use whole episode as prop
  *
- *  5) Make a contact Page that sends an email
+ *  5) Make a contact Page/or a comments page that sends an email/comment of the website
+ *
+ *   6) make the episodes load lazily+a buffer bar or roller
+ *
+ *   7) MAKE A <Spinner/>
+ *   8) use Suspense and have a Spinner as a fallback
+ *   9) make a Seperate Episode List-component
+ *
+ *   UDEMY COURSE STUFF
+ *   Create some async action creators, and import them and use them
+ *   use the async reducer from https://medium.com/@patrick.gross1987/how-to-use-the-react-context-api-with-an-asynchronous-reducer-5651c2dc26aa
+ *   CREATING A SEPPERATE TEST DATABASE!!! Udemy, really important do this one
+ *   The video itself is important not creating a Testdatabase
+ *
+ *   Async React Hooks, video is awesomemly fun, do it as practice :D
  *
  */
 
@@ -36,7 +51,6 @@ export default function HomePage() {
      const [searchText, setSearchText] = React.useState("");
 
      useEffect(() => {
-          
           fetchDataAction();
      }, []);
 
@@ -56,7 +70,12 @@ export default function HomePage() {
           <React.Fragment>
                <SearchBar>
                     <img src={searchIcon} alt="search icon" />
-                    <input value={searchText} onChange={(e) => setSearchText(e.target.value)} placeholder="Search for Episodes..." maxLength="30" />
+                    <input
+                         value={searchText}
+                         onChange={(e) => setSearchText(e.target.value)}
+                         placeholder="Search for Episodes..."
+                         maxLength="30"
+                    />
                </SearchBar>
 
                <EpisodeList>

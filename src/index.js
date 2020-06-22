@@ -9,6 +9,8 @@ import regeneratorRuntime from "regenerator-runtime"; // For async calls DO NOT 
 
 import "./styles/style.scss";
 
+import "./firebase/firebase";
+
 const jsx = (
      <StoreProvider>
           <AppRouter />

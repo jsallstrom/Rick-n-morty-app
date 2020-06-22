@@ -4,11 +4,18 @@ let HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
      entry: "./src/index.js",
 
+     output: {
+          filename: "bundle.[hash].js",
+          path: path.resolve(__dirname, "dist"),
+     },
+
      plugins: [
+          // With Styled-Components It's highly recommended to also use the babel-plugin-styled-components.
           new HtmlWebpackPlugin({
                template: "./src/index.html",
           }),
      ],
+
      module: {
           rules: [
                // we use babel-loader to load our jsx and tsx files
